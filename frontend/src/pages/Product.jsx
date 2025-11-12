@@ -95,7 +95,7 @@ const Product = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/cardRoute/getData?category=card');
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/cardRoute/getData?category=card`);
         if (response.data && response.data.data) {
           setProducts(response.data.data);
         }

@@ -14,7 +14,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchBannerImages = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/cardRoute/getData?category=banner_image')
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/cardRoute/getData?category=banner_image`)
         console.log(response);
         
         if (response.data.data && response.data.data.length > 0) {
@@ -36,7 +36,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/cardRoute/getData?category=card')
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/cardRoute/getData?category=card`)
         if (response.data.data && response.data.data.length > 0) {
           // Select 3-4 random products
           const numberOfProducts = Math.random() > 0.5 ? 3 : 4
