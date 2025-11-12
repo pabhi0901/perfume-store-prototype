@@ -1,0 +1,799 @@
+/* ========================================
+   PRODUCT DESCRIPTION PAGE
+   ======================================== */
+
+.product-desc-page {
+  min-height: 100vh;
+  background: #000000;
+  position: relative;
+  overflow-x: hidden;
+  padding: 100px 0 60px;
+  cursor: none;
+}
+
+/* ========================================
+   HEAVY ANIMATED BACKGROUND
+   ======================================== */
+
+.desc-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background: radial-gradient(ellipse at center, #1a1410 0%, #0a0a0a 40%, #000000 100%);
+}
+
+/* Floating Orbs */
+.floating-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.5;
+  animation: orbFloat 20s ease-in-out infinite;
+}
+
+.orb-1 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.3), rgba(192, 160, 96, 0.1));
+  top: -10%;
+  left: -5%;
+  animation-duration: 25s;
+}
+
+.orb-2 {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(192, 160, 96, 0.25), rgba(212, 175, 55, 0.08));
+  top: 30%;
+  right: -5%;
+  animation-duration: 28s;
+  animation-delay: 3s;
+}
+
+.orb-3 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.2), rgba(192, 160, 96, 0.06));
+  bottom: 10%;
+  left: 20%;
+  animation-duration: 30s;
+  animation-delay: 6s;
+}
+
+.orb-4 {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(192, 160, 96, 0.22), rgba(212, 175, 55, 0.07));
+  bottom: 30%;
+  right: 15%;
+  animation-duration: 32s;
+  animation-delay: 9s;
+}
+
+@keyframes orbFloat {
+  0%, 100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  25% {
+    transform: translate(60px, -80px) scale(1.1) rotate(90deg);
+  }
+  50% {
+    transform: translate(-50px, 70px) scale(0.9) rotate(180deg);
+  }
+  75% {
+    transform: translate(80px, 50px) scale(1.05) rotate(270deg);
+  }
+}
+
+/* Geometric Shapes */
+.geometric-shapes {
+  position: absolute;
+  inset: 0;
+}
+
+.shape {
+  position: absolute;
+  border: 2px solid rgba(212, 175, 55, 0.15);
+  animation: shapeRotate 30s linear infinite;
+}
+
+.shape-1 {
+  width: 200px;
+  height: 200px;
+  top: 15%;
+  left: 10%;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  animation-duration: 35s;
+}
+
+.shape-2 {
+  width: 150px;
+  height: 150px;
+  top: 60%;
+  right: 15%;
+  border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+  animation-duration: 40s;
+  animation-delay: 2s;
+}
+
+.shape-3 {
+  width: 180px;
+  height: 180px;
+  bottom: 20%;
+  left: 50%;
+  border-radius: 41% 59% 58% 42% / 45% 60% 40% 55%;
+  animation-duration: 38s;
+  animation-delay: 4s;
+}
+
+.shape-4 {
+  width: 120px;
+  height: 120px;
+  top: 40%;
+  left: 70%;
+  border-radius: 50%;
+  animation-duration: 33s;
+  animation-delay: 1s;
+}
+
+.shape-5 {
+  width: 160px;
+  height: 160px;
+  bottom: 40%;
+  left: 25%;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  animation-duration: 42s;
+  animation-delay: 3s;
+}
+
+@keyframes shapeRotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.15;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2);
+    opacity: 0.25;
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 0.15;
+  }
+}
+
+/* Particles */
+.particles-container {
+  position: absolute;
+  inset: 0;
+}
+
+.particle {
+  position: absolute;
+  color: rgba(212, 175, 55, 0.3);
+  font-size: 1rem;
+  animation: particleDrift 20s ease-in-out infinite;
+}
+
+.particle-1 { top: 5%; left: 8%; animation-delay: 0s; animation-duration: 22s; }
+.particle-2 { top: 12%; left: 20%; animation-delay: 1s; animation-duration: 24s; }
+.particle-3 { top: 8%; right: 15%; animation-delay: 2s; animation-duration: 26s; }
+.particle-4 { top: 18%; left: 35%; animation-delay: 0.5s; animation-duration: 23s; }
+.particle-5 { top: 25%; right: 25%; animation-delay: 1.5s; animation-duration: 25s; }
+.particle-6 { top: 32%; left: 12%; animation-delay: 2.5s; animation-duration: 27s; }
+.particle-7 { top: 38%; right: 18%; animation-delay: 3s; animation-duration: 21s; }
+.particle-8 { top: 45%; left: 28%; animation-delay: 3.5s; animation-duration: 29s; }
+.particle-9 { top: 52%; right: 32%; animation-delay: 4s; animation-duration: 22s; }
+.particle-10 { top: 58%; left: 45%; animation-delay: 0.8s; animation-duration: 28s; }
+.particle-11 { top: 65%; right: 8%; animation-delay: 1.8s; animation-duration: 24s; }
+.particle-12 { top: 72%; left: 18%; animation-delay: 2.8s; animation-duration: 26s; }
+.particle-13 { top: 78%; right: 40%; animation-delay: 3.8s; animation-duration: 23s; }
+.particle-14 { top: 15%; left: 55%; animation-delay: 4.5s; animation-duration: 25s; }
+.particle-15 { top: 22%; right: 48%; animation-delay: 5s; animation-duration: 27s; }
+.particle-16 { top: 28%; left: 65%; animation-delay: 1.2s; animation-duration: 21s; }
+.particle-17 { top: 35%; right: 55%; animation-delay: 2.2s; animation-duration: 29s; }
+.particle-18 { top: 42%; left: 72%; animation-delay: 3.2s; animation-duration: 22s; }
+.particle-19 { top: 48%; right: 62%; animation-delay: 4.2s; animation-duration: 28s; }
+.particle-20 { top: 55%; left: 82%; animation-delay: 5.2s; animation-duration: 24s; }
+.particle-21 { top: 62%; right: 70%; animation-delay: 0.3s; animation-duration: 26s; }
+.particle-22 { top: 68%; left: 88%; animation-delay: 1.3s; animation-duration: 23s; }
+.particle-23 { top: 75%; right: 78%; animation-delay: 2.3s; animation-duration: 25s; }
+.particle-24 { top: 82%; left: 60%; animation-delay: 3.3s; animation-duration: 27s; }
+.particle-25 { top: 10%; left: 42%; animation-delay: 4.3s; animation-duration: 21s; }
+.particle-26 { top: 88%; right: 22%; animation-delay: 5.3s; animation-duration: 29s; }
+.particle-27 { top: 20%; left: 75%; animation-delay: 0.7s; animation-duration: 22s; }
+.particle-28 { top: 30%; right: 35%; animation-delay: 1.7s; animation-duration: 28s; }
+.particle-29 { top: 50%; left: 5%; animation-delay: 2.7s; animation-duration: 24s; }
+.particle-30 { top: 70%; right: 5%; animation-delay: 3.7s; animation-duration: 26s; }
+.particle-31 { top: 85%; left: 30%; animation-delay: 4.7s; animation-duration: 23s; }
+.particle-32 { top: 40%; left: 90%; animation-delay: 5.7s; animation-duration: 25s; }
+.particle-33 { top: 60%; right: 88%; animation-delay: 0.9s; animation-duration: 27s; }
+.particle-34 { top: 14%; left: 48%; animation-delay: 1.9s; animation-duration: 21s; }
+.particle-35 { top: 26%; right: 12%; animation-delay: 2.9s; animation-duration: 29s; }
+.particle-36 { top: 44%; left: 22%; animation-delay: 3.9s; animation-duration: 22s; }
+.particle-37 { top: 56%; right: 42%; animation-delay: 4.9s; animation-duration: 28s; }
+.particle-38 { top: 66%; left: 52%; animation-delay: 5.9s; animation-duration: 24s; }
+.particle-39 { top: 76%; right: 52%; animation-delay: 0.4s; animation-duration: 26s; }
+.particle-40 { top: 92%; left: 68%; animation-delay: 1.4s; animation-duration: 23s; }
+
+@keyframes particleDrift {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.2;
+  }
+  25% {
+    transform: translate(30px, -50px) rotate(90deg);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translate(-40px, 40px) rotate(180deg);
+    opacity: 0.3;
+  }
+  75% {
+    transform: translate(50px, 30px) rotate(270deg);
+    opacity: 0.5;
+  }
+}
+
+/* Light Beams */
+.light-beams {
+  position: absolute;
+  inset: 0;
+}
+
+.beam {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, 
+    transparent 0%, 
+    rgba(212, 175, 55, 0.2) 50%, 
+    transparent 100%);
+  animation: beamMove 15s ease-in-out infinite;
+}
+
+.beam-1 {
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.beam-2 {
+  left: 50%;
+  animation-delay: 5s;
+  animation-duration: 18s;
+}
+
+.beam-3 {
+  left: 80%;
+  animation-delay: 10s;
+  animation-duration: 20s;
+}
+
+@keyframes beamMove {
+  0%, 100% {
+    opacity: 0.1;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 0.3;
+    transform: translateX(100px);
+  }
+}
+
+/* ========================================
+   CONTENT CONTAINER
+   ======================================== */
+
+.desc-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Back Button */
+.back-btn {
+  position: fixed;
+  top: 84px; /* below navbar */
+  left: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 6px 10px;
+  background: rgba(30, 30, 30, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 16px;
+  color: #D4AF37;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.back-btn:hover {
+  background: rgba(30, 30, 30, 0.9);
+  border-color: #D4AF37;
+  transform: translateX(-2px);
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.2);
+}
+
+.back-icon {
+  font-size: 1rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.back-btn:hover .back-icon {
+  transform: translateX(-2px);
+}
+
+/* Hide the big label to keep button very small */
+.back-btn .back-text {
+  display: none;
+}
+
+/* ========================================
+   PRODUCT DETAIL LAYOUT
+   ======================================== */
+
+.product-detail-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start; /* ensure aligned tops */
+  opacity: 0;
+  animation: contentFadeIn 1s ease forwards 0.3s;
+}
+
+@keyframes contentFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   IMAGE SECTION
+   ======================================== */
+
+.image-section {
+  position: relative; /* remove sticky to fix misalignment */
+  top: 0;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.image-frame {
+  position: relative;
+  background: linear-gradient(145deg, rgba(30, 30, 30, 0.8), rgba(20, 20, 20, 0.9));
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 3rem;
+  overflow: hidden;
+}
+
+.frame-glow {
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(135deg, 
+    rgba(212, 175, 55, 0.4), 
+    rgba(192, 160, 96, 0.2),
+    rgba(212, 175, 55, 0.4));
+  border-radius: 24px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.image-frame:hover .frame-glow {
+  opacity: 1;
+}
+
+.image-content {
+  position: relative;
+  background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+  border-radius: 16px;
+  padding: 2rem;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail-image {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: contain;
+  animation: imageFloat 6s ease-in-out infinite;
+}
+
+@keyframes imageFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05);
+  }
+}
+
+/* Frame Corners */
+.frame-corners {
+  position: absolute;
+  inset: 0;
+}
+
+.corner {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #D4AF37;
+}
+
+.corner-tl {
+  top: 15px;
+  left: 15px;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 8px 0 0 0;
+}
+
+.corner-tr {
+  top: 15px;
+  right: 15px;
+  border-left: none;
+  border-bottom: none;
+  border-radius: 0 8px 0 0;
+}
+
+.corner-bl {
+  bottom: 15px;
+  left: 15px;
+  border-right: none;
+  border-top: none;
+  border-radius: 0 0 0 8px;
+}
+
+.corner-br {
+  bottom: 15px;
+  right: 15px;
+  border-left: none;
+  border-top: none;
+  border-radius: 0 0 8px 0;
+}
+
+/* ========================================
+   INFO SECTION
+   ======================================== */
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* category tag removed per request */
+
+.detail-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  color: #F2F2F2;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  background: linear-gradient(135deg, #F2F2F2 0%, #D4AF37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.flavour-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, 
+    rgba(212, 175, 55, 0.15), 
+    rgba(192, 160, 96, 0.1));
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 50px;
+  width: fit-content;
+}
+
+.badge-icon {
+  color: #D4AF37;
+  font-size: 1rem;
+  animation: iconPulse 2s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+.badge-text {
+  font-size: 0.85rem;
+  color: #D4AF37;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.description-box {
+  padding: 2rem;
+  background: rgba(30, 30, 30, 0.5);
+  backdrop-filter: blur(10px);
+  border-left: 3px solid #D4AF37;
+  border-radius: 12px;
+}
+
+.desc-heading {
+  font-size: 1.2rem;
+  color: #D4AF37;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.desc-text {
+  font-size: 1.05rem;
+  color: rgba(242, 242, 242, 0.8);
+  line-height: 1.8;
+}
+
+.price-section {
+  padding: 2rem;
+  background: linear-gradient(135deg, 
+    rgba(30, 30, 30, 0.8), 
+    rgba(20, 20, 20, 0.9));
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 16px;
+}
+
+.price-label {
+  font-size: 0.9rem;
+  color: rgba(242, 242, 242, 0.6);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.price-amount {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.currency {
+  font-size: 1.8rem;
+  color: #C0A060;
+  font-weight: 600;
+}
+
+.amount {
+  font-size: 3rem;
+  color: #D4AF37;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* ========================================
+   ACTION BUTTONS
+   ======================================== */
+
+.action-buttons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.cart-btn,
+.buy-btn {
+  position: relative;
+  flex: 1;
+  padding: 1.2rem 2rem;
+  border: 2px solid rgba(212, 175, 55, 0.4);
+  border-radius: 50px;
+  background: transparent;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.btn-bg-effect {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #D4AF37 0%, #C0A060 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 0;
+}
+
+.cart-btn:hover .btn-bg-effect,
+.buy-btn:hover .btn-bg-effect {
+  transform: scaleX(1);
+}
+
+.btn-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  color: #D4AF37;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: color 0.4s ease;
+  z-index: 1;
+}
+
+.cart-btn:hover .btn-content,
+.buy-btn:hover .btn-content {
+  color: #121212;
+}
+
+.btn-icon {
+  font-size: 1.3rem;
+  transition: transform 0.3s ease;
+}
+
+.cart-btn:hover .btn-icon,
+.buy-btn:hover .btn-icon {
+  transform: scale(1.2);
+}
+
+.cart-btn:hover,
+.buy-btn:hover {
+  border-color: transparent;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4);
+}
+
+.buy-btn {
+  border-color: rgba(192, 160, 96, 0.5);
+}
+
+/* product id display removed per request */
+
+/* ========================================
+   CUSTOM CURSOR
+   ======================================== */
+
+.custom-cursor-outer {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #D4AF37;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease,
+              width 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+              height 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.3),
+              inset 0 0 10px rgba(212, 175, 55, 0.15);
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.05), transparent);
+}
+
+.custom-cursor-inner {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, #D4AF37, #C0A060);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease,
+              width 0.2s ease,
+              height 0.2s ease;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.6),
+              0 0 30px rgba(212, 175, 55, 0.3);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 1024px) {
+  .product-detail-wrapper {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .image-section {
+    position: relative;
+    top: 0;
+  }
+
+  .image-content {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .desc-container {
+    padding: 0 1.5rem;
+  }
+
+  .product-detail-wrapper {
+    gap: 2.5rem;
+  }
+
+  .image-frame {
+    padding: 2rem;
+  }
+
+  .detail-title {
+    font-size: 2rem;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .amount {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-desc-page {
+    padding: 80px 0 40px;
+  }
+
+  .desc-container {
+    padding: 0 1rem;
+  }
+
+  .back-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .image-frame {
+    padding: 1.5rem;
+  }
+
+  .image-content {
+    min-height: 300px;
+    padding: 1.5rem;
+  }
+
+  .info-content {
+    gap: 1.5rem;
+  }
+
+  .description-box {
+    padding: 1.5rem;
+  }
+
+  .price-section {
+    padding: 1.5rem;
+  }
+}
